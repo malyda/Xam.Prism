@@ -21,7 +21,7 @@ namespace Xam.Prism.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Xam.Prism.App());
+            LoadApplication(new Xam.Prism.App(new UWPInitializer()));
         }
     }
 }
