@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prism.Commands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,13 @@ namespace Xam.Prism.View
         }
         public int Id { get; set; }
         public string Title { get; set; }
+        public string Page { get; set; }
 
         public Type TargetType { get; set; }
+
+        public override string ToString()
+        {
+            return Page;
+        }
     }
 }

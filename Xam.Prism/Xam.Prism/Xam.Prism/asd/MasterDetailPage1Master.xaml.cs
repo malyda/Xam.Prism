@@ -10,34 +10,34 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Xam.Prism.View
+namespace Xam.Prism.asd
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CustomMasterDetailPageMaster : ContentPage
+    public partial class MasterDetailPage1Master : ContentPage
     {
         public ListView ListView;
 
-        public CustomMasterDetailPageMaster()
+        public MasterDetailPage1Master()
         {
             InitializeComponent();
 
-            BindingContext = new CustomMasterDetailPageMasterViewModel();
+            BindingContext = new MasterDetailPage1MasterViewModel();
             ListView = MenuItemsListView;
         }
 
-        class CustomMasterDetailPageMasterViewModel : INotifyPropertyChanged
+        class MasterDetailPage1MasterViewModel : INotifyPropertyChanged
         {
-            public ObservableCollection<CustomMasterDetailPageMenuItem> MenuItems { get; set; }
+            public ObservableCollection<MasterDetailPage1MenuItem> MenuItems { get; set; }
             
-            public CustomMasterDetailPageMasterViewModel()
+            public MasterDetailPage1MasterViewModel()
             {
-                MenuItems = new ObservableCollection<CustomMasterDetailPageMenuItem>(new[]
+                MenuItems = new ObservableCollection<MasterDetailPage1MenuItem>(new[]
                 {
-                    new CustomMasterDetailPageMenuItem { Id = 0, Title = "Page 1" },
-                    new CustomMasterDetailPageMenuItem { Id = 1, Title = "Page 2" },
-                    new CustomMasterDetailPageMenuItem { Id = 2, Title = "Page 3" },
-                    new CustomMasterDetailPageMenuItem { Id = 3, Title = "Page 4" },
-                    new CustomMasterDetailPageMenuItem { Id = 4, Title = "Page 5" },
+                    new MasterDetailPage1MenuItem { Id = 0, Title = "Page 1" },
+                    new MasterDetailPage1MenuItem { Id = 1, Title = "Page 2" },
+                    new MasterDetailPage1MenuItem { Id = 2, Title = "Page 3" },
+                    new MasterDetailPage1MenuItem { Id = 3, Title = "Page 4" },
+                    new MasterDetailPage1MenuItem { Id = 4, Title = "Page 5" },
                 });
             }
             

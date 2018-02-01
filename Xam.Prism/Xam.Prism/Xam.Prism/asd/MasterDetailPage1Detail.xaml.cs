@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Prism.Navigation;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Xam.Prism.View
+namespace Xam.Prism.asd
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CustomMasterDetailPage : MasterDetailPage
+    public partial class MasterDetailPage1Detail : ContentPage
     {
-
-        public CustomMasterDetailPage()
+        public MasterDetailPage1Detail()
         {
             InitializeComponent();
         }
-
     }
 }
