@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xam.Prism.View.MasterDetailPages.CustomMasterDetailPage"
+             xmlns:pages="clr-namespace:Xam.Prism.View.MasterDetailPages"
+             xmlns:prism="clr-namespace:Prism.Behaviors;assembly=Prism.Forms">
+    <MasterDetailPage.Master>
+        <pages:MasterPage></pages:MasterPage>
+    </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage>
+      <x:Arguments>
+        <pages:CustomMasterDetailPageDetail />
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
