@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.Prism.Android", "Xam.Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.Prism.UWP", "Xam.Prism\Xam.Prism.UWP\Xam.Prism.UWP.csproj", "{53742F18-51F5-4C47-AE6D-AD6C7FEE10EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.Prism", "Xam.Prism\Xam.Prism\Xam.Prism.csproj", "{66F11C1C-92C9-4270-865D-C365E4FD02A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xam.Prism", "Xam.Prism\Xam.Prism\Xam.Prism.csproj", "{66F11C1C-92C9-4270-865D-C365E4FD02A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,38 +7,47 @@
   <ItemGroup>
     <PackageReference Include="Prism.Forms" Version="7.0.0.396" />
     <PackageReference Include="Prism.Unity.Forms" Version="7.0.0.396" />
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
-    <Compile Update="asd\MasterDetailPage1MenuItem.cs">
+    <Compile Update="View\asd\CustomMasterDetailPage.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="View\asd\CustomMasterDetailPageDetail.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="View\asd\CustomMasterDetailPageMenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
-      <DependentUpon>*.xaml</DependentUpon>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="View\Pages\SimplePage.xaml.cs">
+      <DependentUpon>SimplePage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="View\CustomMasterDetailPageMenuItem.cs">
+    <Compile Update="View\Pages\MasterDetailPageRoot\CustomMasterDetailPageMenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="asd\MasterDetailPage1.xaml">
+    <EmbeddedResource Update="View\Pages\MasterDetailPageRoot\CustomMasterDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="asd\MasterDetailPage1Detail.xaml">
+    <EmbeddedResource Update="View\Pages\MasterDetailPageRoot\CustomMasterDetailPageDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="asd\MasterDetailPage1Master.xaml">
+    <EmbeddedResource Update="View\Pages\DetailPages\FirstPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\CustomMasterDetailPage.xaml">
+    <EmbeddedResource Update="View\Pages\MasterDetailPageRoot\CustomMasterDetailPageMaster.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\CustomMasterDetailPageDetail.xaml">
+    <EmbeddedResource Update="View\Pages\DetailPages\SecondPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Pages\DetailPages\ThirdPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

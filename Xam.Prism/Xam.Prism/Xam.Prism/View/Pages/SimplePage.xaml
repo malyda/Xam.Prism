@@ -1,11 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Xam.Prism"
-             x:Class="Xam.Prism.MainPage">
+             x:Class="Xam.Prism.View.Pages.SimplePage"
+             Title="Simple Page">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
+    <Label Text="Just simple page"
+           VerticalOptions="Center"
            HorizontalOptions="Center" />
 
 </ContentPage>
