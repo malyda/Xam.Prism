@@ -9,7 +9,8 @@
             <Label Text="First Page"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" />
-            <Button Text="Navigate to simple page" Command="{Binding OnNavigateCommand}"
+            <Button Text="Navigate to simple page" 
+                    Command="{Binding OnNavigateCommand}"
                     CommandParameter="{Binding NavigateTo}" />
         </StackLayout>
     </ContentPage.Content>

@@ -3,8 +3,10 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   xmlns:masterDetailPageRoot="clr-namespace:Xam.Prism.View.Pages.MasterDetailPageRoot;assembly=Xam.Prism"
-                  x:Class="Xam.Prism.View.Pages.MasterDetailPageRoot.CustomMasterDetailPage">
-    <MasterDetailPage.Master>
+                  x:Class="Xam.Prism.View.Pages.MasterDetailPageRoot.CustomMasterDetailPage"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
+                  >
+    <MasterDetailPage.Master >
         <masterDetailPageRoot:CustomMasterDetailPageMaster />
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>

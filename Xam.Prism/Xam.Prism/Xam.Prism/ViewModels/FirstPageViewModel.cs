@@ -2,26 +2,32 @@
 using Prism.Navigation;
 using System;
 using System.Diagnostics;
+using Prism.Events;
+using Prism.Mvvm;
+using Xam.Prism.View.Events;
 using static Xam.Prism.Enums.NavigationEnums;
 
 namespace Xam.Prism.ViewModels
 {
-    class FirstPageViewModel
+    class FirstPageViewModel: BindableBase
     {
         readonly INavigationService _navigationService;
-        private DelegateCommand<string> OnNavigateCommand { get; set; }
+        private readonly IEventAggregator _eventAggregator;
+        public DelegateCommand<string> OnNavigateCommand { get; set; }
 
         public string NavigateTo { get; set; } = PagesForNavigation.SimplePage.ToString();
 
-        public FirstPageViewModel(INavigationService navigationService)
+        public FirstPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator)
         {
             _navigationService = navigationService;
+            _eventAggregator = eventAggregator;
             OnNavigateCommand = new DelegateCommand<string>(NavigateAsync);
         }
 
-        async void NavigateAsync(string navigateToPage)
+         void NavigateAsync(string navigateToPage)
         {
-            await _navigationService.NavigateAsync(new Uri(navigateToPage, UriKind.Relative));
+            var uri = new Uri($"{navigateToPage}",UriKind.Relative);
+            _navigationService.NavigateAsync(uri);
         }
     }
 }

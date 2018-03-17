@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Xam.Prism.ViewModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Xam.Prism.View.Pages.MasterDetailPageRoot

@@ -1,4 +1,5 @@
-﻿using Prism;
+﻿using System;
+using Prism;
 using Prism.Ioc;
 using Xam.Prism.View.Pages;
 using Xam.Prism.View.Pages.MasterDetailPageRoot;
@@ -20,6 +21,9 @@ namespace Xam.Prism
             // Register MasterDetailPage with ViewModel
             containerRegistry.RegisterForNavigation<CustomMasterDetailPage, CustomMasterDetailPageViewModel>(
                 RootPagesForNavigation.CustomMasterDetailPage.ToString());
+
+            containerRegistry.RegisterForNavigation<CustomMasterDetailPageMaster, CustomMasterDetailPageMasterViewModel>(
+                RootPagesForNavigation.CustomMasterDetailPageMaster.ToString());
             containerRegistry.RegisterForNavigation<CustomMasterDetailPageDetail>();
 
             // Register base pages for navigation
@@ -40,7 +44,7 @@ namespace Xam.Prism
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync(PrismExtensionNavigation.GetBaseMasterDetailPageUri());
+            NavigationService.NavigateAsync(PrismExtensionNavigation.GetMasterDetailPageUri());
         }
 
         protected override void OnResume()

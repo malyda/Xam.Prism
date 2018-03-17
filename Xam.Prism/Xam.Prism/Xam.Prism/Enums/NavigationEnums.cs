@@ -13,7 +13,8 @@
         public enum RootPagesForNavigation
         {
             NavigationPage,
-            CustomMasterDetailPage
+            CustomMasterDetailPage,
+            CustomMasterDetailPageMaster
         }
     }
 }

@@ -5,21 +5,13 @@ namespace Xam.Prism
 {
     static class PrismExtensionNavigation
     {
-        public static string GetBaseNavigationStack()
+        public static string GetBaseNavigationPage()
         {
             return RootPagesForNavigation.NavigationPage.ToString();
         }
-
-        public static string GetBaseMasterDetailPageStack()
+        public static Uri GetMasterDetailPageUri()
         {
-            return
-                $"{RootPagesForNavigation.CustomMasterDetailPage}/{RootPagesForNavigation.NavigationPage}/{PagesForNavigation.FirstPage}";
-        }
-
-        public static Uri GetBaseMasterDetailPageUri(bool absolute = false)
-        {
-            if (absolute) return new Uri(GetBaseMasterDetailPageStack(), UriKind.Absolute);
-            else return new Uri(GetBaseMasterDetailPageStack(), UriKind.Relative);
+            return new Uri(RootPagesForNavigation.CustomMasterDetailPage.ToString(), UriKind.Relative);
         }
     }
 }
